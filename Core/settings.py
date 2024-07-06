@@ -26,10 +26,9 @@ DEBUG = True
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['marsgame.uz',"*"]
 
-# Application definition
-
+ALLOWED_IP = '84.54.78.19'
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -113,6 +112,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'Core.middleware.IPRestrictionMiddleware',
 ]
 
 ROOT_URLCONF = 'Core.urls'
